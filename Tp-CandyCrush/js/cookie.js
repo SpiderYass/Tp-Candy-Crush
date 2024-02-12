@@ -32,16 +32,12 @@ export default class Cookie {
   }
 
   selectionnee() {
-    // on change l'image et la classe CSS
     this.htmlImage.src = Cookie.urlsImagesSurlignees[this.type];
-    // on zoome et on ajoute une ombre
     this.htmlImage.classList.add("cookies-selected");
   }
 
   deselectionnee() {
-    // on change l'image et la classe CSS
     this.htmlImage.src = Cookie.urlsImagesNormales[this.type];
-    // on supprime la classe CSS selectionnée
     this.htmlImage.classList.remove("cookies-selected");
   }
 

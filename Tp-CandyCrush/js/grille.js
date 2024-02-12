@@ -14,22 +14,9 @@ export default class Grille {
 
     //let existeAlignement = false;
     this.remplirTableauDeCookies(6);
-    /*
-    do {
-      this.remplirTableauDeCookies(6);
-      existeAlignement = this.testAlignementDansTouteLaGrille();
-      console.log("ExisteAlignement : " + existeAlignement)
-    } while(existeAlignement)
-    */
-  }
+    }
 
-  /**
-   * parcours la liste des divs de la grille et affiche les images des cookies
-   * correspondant à chaque case. Au passage, à chaque image on va ajouter des
-   * écouteurs de click et de drag'n'drop pour pouvoir interagir avec elles
-   * et implémenter la logique du jeu.
-   */
-  showCookies() {
+ showCookies() {
     // on récupère tous les divs de la grille pour y mettre les images 
     let caseDivs = document.querySelectorAll("#grille div");
 
@@ -112,18 +99,7 @@ export default class Grille {
     let colonneCookie = i.dataset.colonne;
     return this.cookies[ligneCookie][colonneCookie];
   }
-  /**
-   * Initialisation du niveau de départ. Le paramètre est le nombre de cookies différents
-   * dans la grille. 4 types (4 couleurs) = facile de trouver des possibilités de faire
-   * des groupes de 3. 5 = niveau moyen, 6 = niveau difficile
-   *
-   * Améliorations : 1) s'assurer que dans la grille générée il n'y a pas déjà de groupes
-   * de trois. 2) S'assurer qu'il y a au moins 1 possibilité de faire un groupe de 3 sinon
-   * on a perdu d'entrée. 3) réfléchir à des stratégies pour générer des niveaux plus ou moins
-   * difficiles.
-   *
-   * On verra plus tard pour les améliorations...
-   */
+  
   remplirTableauDeCookies(nbDeCookiesDifferents) {
     for (let l = 0; l < this.lignes; l++) {
       for (let c = 0; c < this.colonnes; c++) {

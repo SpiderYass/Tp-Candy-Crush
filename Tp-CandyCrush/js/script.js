@@ -1,8 +1,5 @@
 import Grille from "./grille.js";
 
-// 1 On définisse une sorte de "programme principal"
-// le point d'entrée du code qui sera appelée dès que la
-// page ET SES RESSOURCES est chargée
 
 window.onload = init;
 
